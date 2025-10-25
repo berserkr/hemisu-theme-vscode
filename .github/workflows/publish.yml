@@ -18,14 +18,14 @@ jobs:
         with:
           node-version: 18
 
-      - name: Install vsce 2.10.0
-        run: npm install -g vsce@2.10.0
+      - name: Install dependencies
+        run: npm install
 
-      - name: Verify vsce version
-        run: vsce --version
+      - name: Install @vscode/vsce locally
+        run: npm install --save-dev @vscode/vsce
 
-      - name: Package the theme
-        run: vsce package
+      - name: Package VSIX
+        run: npx @vscode/vsce package
 
       - name: Upload .vsix artifact
         uses: actions/upload-artifact@v4

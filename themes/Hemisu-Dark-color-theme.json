@@ -1,0 +1,23 @@
+{
+  "name": "Hemisu Dark",
+  "type": "dark",
+  "colors": {
+    "editor.background": "#000000",
+    "editor.foreground": "#efefef",
+    "editorCursor.foreground": "#ffffff",
+    "editor.selectionBackground": "#333333",
+    "editorLineNumber.foreground": "#777777",
+    "statusBar.background": "#111111",
+    "activityBar.background": "#1a1a1a",
+    "sideBar.background": "#0f0f0f"
+  },
+  "tokenColors": [
+    { "scope": "comment", "settings": { "foreground": "#777777" } },
+    { "scope": "string", "settings": { "foreground": "#99cc00" } },
+    { "scope": "constant.numeric", "settings": { "foreground": "#ff6699" } },
+    { "scope": "keyword", "settings": { "foreground": "#6699ff" } },
+    { "scope": "entity.name.function", "settings": { "foreground": "#ff9933" } },
+    { "scope": "variable", "settings": { "foreground": "#efefef" } },
+    { "scope": "storage.type", "settings": { "foreground": "#cc99ff" } }
+  ]
+}

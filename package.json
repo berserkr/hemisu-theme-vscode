@@ -1,0 +1,25 @@
+{
+  "name": "hemisu-theme",
+  "displayName": "Hemisu Theme",
+  "description": "Hemisu Light and Dark color themes for Visual Studio Code",
+  "version": "1.0.0",
+  "publisher": "berserkr",
+  "engines": {
+    "vscode": "^1.50.0"
+  },
+  "categories": ["Themes"],
+  "contributes": {
+    "themes": [
+      {
+        "label": "Hemisu Light",
+        "uiTheme": "vs",
+        "path": "./themes/Hemisu-Light-color-theme.json"
+      },
+      {
+        "label": "Hemisu Dark",
+        "uiTheme": "vs-dark",
+        "path": "./themes/Hemisu-Dark-color-theme.json"
+      }
+    ]
+  }
+}

@@ -1,0 +1,36 @@
+name: Build Hemisu VSCode Theme
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch: # Allows manual run from GitHub UI
+
+jobs:
+  package:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
+      - name: Install vsce
+        run: npm install -g vsce@2.10.0
+
+      - name: Verify vsce version
+        run: vsce --version
+
+      - name: Package the theme
+        run: vsce package
+
+      - name: Upload .vsix artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: hemisu-theme
+          path: '*.vsix'
+
+

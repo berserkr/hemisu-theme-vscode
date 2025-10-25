@@ -3,7 +3,7 @@ name: Build Hemisu VSCode Theme
 on:
   push:
     branches: [ main ]
-  workflow_dispatch: # Manual trigger
+  workflow_dispatch:
 
 jobs:
   package:
@@ -18,7 +18,7 @@ jobs:
         with:
           node-version: 18
 
-      - name: Install vsce
+      - name: Install vsce 2.10.0
         run: npm install -g vsce@2.10.0
 
       - name: Verify vsce version
